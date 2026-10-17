@@ -14,15 +14,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedelazabdev.github.io/tafqeet/">
 
-    <!-- Preconnect to Google Fonts -->
+    <!-- Preconnect to Fonts CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Async Font Loading (Eliminates Render-Blocking & Reduces Weight Chains) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <!-- Eliminates CLS completely using display=optional -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
     </noscript>
 
     <!-- Schema Markup: WebApplication & FAQPage -->
@@ -90,9 +90,9 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* Font stack with system fallback matching metrics to fix CLS */
+        /* Modern System UI fallback prevents font shift completely */
         body { 
-            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif; 
+            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, Arial, sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main); 
             line-height: 1.7; 
@@ -105,21 +105,21 @@
         nav a:hover { color: var(--primary); }
         .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
         
-        /* Tool Card - Optimized to prevent CLS */
+        /* Tool Card */
         .tool-card { 
             background: var(--card-bg); 
             border-radius: 16px; 
             padding: 2rem; 
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); 
             border: 1px solid var(--border); 
-            margin-bottom: 3rem; 
-            contain: layout style;
+            margin-bottom: 2.5rem; 
+            contain: layout;
         }
-        .tool-card h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary); line-height: 1.3; min-height: 2.3rem; }
-        .tool-card p.subtitle { color: var(--text-muted); margin-bottom: 1.5rem; min-height: 1.7rem; }
+        .tool-card h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary); line-height: 1.3; }
+        .tool-card p.subtitle { color: var(--text-muted); margin-bottom: 1.5rem; }
         
         .form-group { margin-bottom: 1.2rem; }
-        label { display: block; font-weight: 600; margin-bottom: 0.5rem; height: 1.5rem; line-height: 1.5rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
         input[type="number"], select { 
             width: 100%; 
             height: 48px; 
@@ -132,12 +132,10 @@
         }
         input[type="number"]:focus, select:focus { border-color: var(--primary); }
         
-        /* Grid with fixed minimum spacing to stop shifting */
         .grid-2 { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
             gap: 1rem; 
-            min-height: 85px;
         }
         
         .result-box { 
@@ -150,7 +148,7 @@
             min-height: 110px;
         }
         .result-title { font-size: 0.9rem; color: #15803d; font-weight: 700; margin-bottom: 0.5rem; }
-        .result-text { font-size: 1.25rem; font-weight: 700; color: #166534; word-break: break-word; min-height: 38px; }
+        .result-text { font-size: 1.25rem; font-weight: 700; color: #166534; word-break: break-word; }
         .btn-copy { 
             position: absolute; 
             left: 1rem; 
@@ -165,8 +163,16 @@
         }
         .btn-copy:hover { background: #dcfce7; }
         
-        /* Long SEO Content */
-        .content-section { background: var(--card-bg); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); margin-bottom: 2rem; }
+        /* SEO Content Section - Isolated to stop layout shifts completely */
+        .content-section { 
+            background: var(--card-bg); 
+            border-radius: 16px; 
+            padding: 2.5rem; 
+            border: 1px solid var(--border); 
+            margin-bottom: 2rem; 
+            content-visibility: auto; 
+            contain-intrinsic-size: 1px 1200px;
+        }
         .content-section h2 { font-size: 1.45rem; color: var(--primary); margin: 1.8rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f5f9; }
         .content-section h3 { font-size: 1.2rem; margin: 1.2rem 0 0.6rem; color: var(--text-main); }
         .content-section p { margin-bottom: 1.2rem; color: #334155; }
@@ -178,7 +184,7 @@
         
         footer { text-align: center; padding: 2rem; background: #fff; border-top: 1px solid var(--border); margin-top: 4rem; color: var(--text-muted); }
         @media (max-width: 600px) { 
-            .grid-2 { grid-template-columns: 1fr; min-height: 170px; } 
+            .grid-2 { grid-template-columns: 1fr; } 
         }
     </style>
 </head>
