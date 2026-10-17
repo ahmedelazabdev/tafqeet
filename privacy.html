@@ -3,98 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية | أداة تفقيط الأرقام إلى كلمات</title>
-    <meta name="description" content="سياسة الخصوصية الرسمية لأداة تفقيط الأرقام. خصوصيتك وبياناتك المالية محمية 100% بدون تخزين، مع الامتثال الصارم لسياسات Google AdSense وGDPR.">
-    <link rel="canonical" href="https://yourusername.github.io/privacy.html">
+    <title>سياسة الخصوصية | أداة تفقيط الأرقام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #059669;
-            --bg-page: #f8fafc;
-            --surface: #ffffff;
-            --border: #e2e8f0;
-            --text-title: #0f172a;
-            --text-body: #334155;
-            --text-muted: #64748b;
-            --radius-lg: 16px;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Cairo", sans-serif; }
-        body { background-color: var(--bg-page); color: var(--text-body); line-height: 1.85; min-height: 100vh; display: flex; flex-direction: column; }
-        header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
-        .nav-wrap { max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-size: 1.35rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-        .brand svg { width: 28px; height: 28px; fill: var(--primary); }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-
-        main { max-width: 900px; width: 100%; margin: 2.5rem auto; padding: 0 1.25rem; flex: 1; }
-        .hero { text-align: center; margin-bottom: 2rem; }
-        .hero h1 { font-size: 2.2rem; color: var(--text-title); margin-bottom: 0.5rem; }
-        .hero p { color: var(--text-muted); font-size: 1.1rem; }
-
-        .content-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem; }
-        .content-box h2 { font-size: 1.45rem; color: var(--text-title); margin: 1.8rem 0 0.8rem; border-right: 4px solid var(--primary); padding-right: 0.8rem; }
-        .content-box p { margin-bottom: 1.2rem; font-size: 1.02rem; text-align: justify; }
-        .content-box ul { padding-right: 1.8rem; margin-bottom: 1.4rem; }
-        .content-box li { margin-bottom: 0.6rem; }
-
-        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem 1.5rem; margin-top: auto; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .footer-brand { font-size: 1.1rem; font-weight: 700; color: var(--text-title); }
-        .footer-brand span { color: var(--primary); }
-        .footer-copy { color: var(--text-muted); font-size: 0.88rem; }
+        body { font-family: 'Cairo', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.8; margin: 0; }
+        header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 1rem 2rem; }
+        .nav-container { max-width: 900px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: #0f766e; text-decoration: none; }
+        nav a { margin-right: 1.5rem; text-decoration: none; color: #64748b; font-weight: 600; }
+        .container { max-width: 800px; margin: 3rem auto; background: #fff; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; }
+        h1 { color: #0f766e; margin-bottom: 1.5rem; }
+        h2 { color: #1e293b; margin-top: 1.5rem; font-size: 1.3rem; }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="nav-wrap">
-            <a href="index.html" class="brand">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1z"/></svg>
-                <span>تفقيط الأرقام</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">الرئيسية والمحول</a></li>
-                <li><a href="about.html">عن الموقع</a></li>
-                <li><a href="privacy.html" class="active">الخصوصية</a></li>
-            </ul>
+        <div class="nav-container">
+            <a href="index.html" class="logo">أداة تفقيط الأرقام</a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">عن الموقع</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+            </nav>
         </div>
     </header>
+    <div class="container">
+        <h1>سياسة الخصوصية وأمان البيانات</h1>
+        <p>نحن نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت. تم إعداد هذه السياسة لمساعدتكم في فهم طبيعة البيانات التي نجمعها وكيفية التعامل معها.</p>
 
-    <main>
-        <div class="hero">
-            <h1>سياسة الخصوصية وأمان البيانات</h1>
-            <p>نولي سرية بياناتك المالية ومعاملاتك الحسابية أهمية قصوى ومطلقة.</p>
-        </div>
+        <h2>المعالجة المحلية للبيانات (Client-side Processing)</h2>
+        <p>تتميز أداة تفقيط الأرقام بأن جميع العمليات الحسابية والتحويلية للأرقام والمبالغ المالية تتم بالكامل داخل متصفح الإنترنت الخاص بك (من جانب العميل). <strong>نحن لا نقوم بحفظ، أو تسجيل، أو إرسال أي أرقام أو مبالغ مالية تقوم بإدخالها إلى أي خوادم خارجية إطلاقاً.</strong></p>
 
-        <article class="content-box">
-            <h2>1. الخصوصية التامة للمبالغ والأرقام</h2>
-            <p>
-                تعمل <strong>أداة تفقيط الأرقام</strong> بنظام المعالجة الداخلية من جانب العميل فقط (Client-side JavaScript). هذا يعني أن أي رقم أو مبلغ مالي تقوم بإدخاله تجري معالجته داخل ذاكرة متصفحك المؤقتة فقط. <strong>نحن لا نقوم برفع أو تخزين أو فحص أي من أرقامك أو مبالغك على خوادمنا نهائياً</strong>.
-            </p>
+        <h2>ملفات تعريف الارتباط (Cookies) وإعلانات الطرف الثالث</h2>
+        <p>قد يستخدم الموقع خدمات إعلانية كأطراف ثالثة (مثل Google AdSense) أو أدوات قياس الزيارات (Google Analytics)، والتي قد تستخدم ملفات تعريف الارتباط لتحسين تجربة تصفحك وتقديم إعلانات ملائمة بناءً على زياراتك السابقة للموقع.</p>
 
-            <h2>2. ملفات تعريف الارتباط والإعلانات (Google AdSense)</h2>
-            <p>
-                لا يجمع الموقع أي بيانات شخصية محددة للهوية. ولدعم استمرار هذه الأداة مجاناً لجميع المستخدمين، قد نستعين بشبكة Google AdSense لعرض الإعلانات:
-            </p>
-            <ul>
-                <li>تستخدم شركة Google ملفات تعريف الارتباط (Cookies) لتقديم إعلانات تلائم اهتماماتك استناداً لزياراتك للمواقع.</li>
-                <li>يمكن للمستخدم تعطيل تخصيص الإعلانات في أي وقت عبر الانتقال إلى <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">إعدادات إعلانات Google</a>.</li>
-            </ul>
-
-            <h2>3. إخلاء المسؤولية القانونية</h2>
-            <p>
-                تم تصميم الأداة بأعلى درجات الدقة المحاسبية واللغوية، إلا أن الخدمة تُقدم "كما هي" دون أي التزامات قانونية تترتب على القائمين على الموقع ناتجة عن أي خطأ ناتج عن سوء إدخال الأرقام أو استخدامها في المعاملات المالية الرسمية. ننصح دائماً بمراجعة وتدقيق المستندات قبل التوقيع النهائي.
-            </p>
-        </article>
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">أداة <span>تفقيط الأرقام</span></div>
-            <div class="footer-copy">© 2026 جميع الحقوق محفوظة — أداة تفقيط مالية ومصرفية مجانية وفائقة السرعة.</div>
-        </div>
-    </footer>
-
+        <h2>تعديل سياسة الخصوصية</h2>
+        <p>نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية هذه إذا لزم الأمر، وسيتم نشر أي تحديثات في هذه الصفحة.</p>
+    </div>
 </body>
 </html>
