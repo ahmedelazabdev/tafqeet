@@ -14,17 +14,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedelazabdev.github.io/tafqeet/">
 
-    <!-- Preconnect to Fonts CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Eliminates CLS completely using display=optional -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    </noscript>
-
     <!-- Schema Markup: WebApplication & FAQPage -->
     <script type="application/ld+json">
     {
@@ -90,12 +79,13 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* Modern System UI fallback prevents font shift completely */
+        /* Native High-Performance Arabic Font Stack (Zero Latency - Zero CLS) */
         body { 
-            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, Arial, sans-serif; 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main); 
             line-height: 1.7; 
+            -webkit-font-smoothing: antialiased;
         }
 
         header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 2rem; min-height: 65px; }
@@ -113,7 +103,6 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); 
             border: 1px solid var(--border); 
             margin-bottom: 2.5rem; 
-            contain: layout;
         }
         .tool-card h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary); line-height: 1.3; }
         .tool-card p.subtitle { color: var(--text-muted); margin-bottom: 1.5rem; }
@@ -163,15 +152,13 @@
         }
         .btn-copy:hover { background: #dcfce7; }
         
-        /* SEO Content Section - Isolated to stop layout shifts completely */
+        /* SEO Content */
         .content-section { 
             background: var(--card-bg); 
             border-radius: 16px; 
             padding: 2.5rem; 
             border: 1px solid var(--border); 
             margin-bottom: 2rem; 
-            content-visibility: auto; 
-            contain-intrinsic-size: 1px 1200px;
         }
         .content-section h2 { font-size: 1.45rem; color: var(--primary); margin: 1.8rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f5f9; }
         .content-section h3 { font-size: 1.2rem; margin: 1.2rem 0 0.6rem; color: var(--text-main); }
@@ -192,9 +179,9 @@
 
     <header>
         <div class="nav-container">
-            <a href="/" class="logo">أداة تفقيط الأرقام</a>
+            <a href="index.html" class="logo">أداة تفقيط الأرقام</a>
             <nav>
-                <a href="/">الرئيسية</a>
+                <a href="index.html">الرئيسية</a>
                 <a href="about.html">عن الموقع</a>
                 <a href="privacy.html">سياسة الخصوصية</a>
             </nav>
@@ -202,7 +189,6 @@
     </header>
 
     <main class="container">
-        <!-- Application Tool -->
         <div class="tool-card">
             <h1>تفقيط الأرقام والمبالغ المالية إلى حروف عربية</h1>
             <p class="subtitle">أدخل الرقم للحصول على الصياغة اللغوية الدقيقة والمعتمدة لدى البنوك والغرف التجارية فورياً.</p>
@@ -241,7 +227,6 @@
             </div>
         </div>
 
-        <!-- Long SEO Content -->
         <article class="content-section">
             <h2>دليل تفقيط الأرقام: الأسس النحوية والاستخدامات المالية والمصرفية</h2>
             <p>
@@ -297,7 +282,7 @@
     </main>
 
     <footer>
-        <p>&copy; جميع الحقوق محفوظة | أداة تفقيط الأرقام العربية المعتمدة</p>
+        <p>&copy;جميع الحقوق محفوظة | أداة تفقيط الأرقام العربية المعتمدة</p>
     </footer>
 
     <script>
