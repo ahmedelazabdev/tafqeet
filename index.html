@@ -6,17 +6,24 @@
     <title>تفقيط الأرقام وتحويلها إلى كلمات عربية معتمدة | أداة التفقيط المالي</title>
     <meta name="description" content="أسرع وأدق أداة لتفقيط الأرقام وتحويلها إلى نصوص وكلمات باللغة العربية متوافقة مع البنوك والشيكات والفواتير لجميع العملات العربية والعالمية مجاناً.">
     <meta name="keywords" content="تفقيط, تفقيط الارقام, تحويل الارقام الى كلمات, تفقيط الشيكات, كتابة المبالغ بالكلمات, تفقيط العملات">
-    <link rel="canonical" href="https://example.com/">
+    <link rel="canonical" href="https://ahmedelazabdev.github.io/tafqeet/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="تفقيط الأرقام | أداة التحويل المالي المعتمد">
     <meta property="og:description" content="حول أي مبلغ رقمي إلى كلمات عربية فصحى بدقة لغوية ومحاسبية معتمدة للشيكات والفواتير.">
     <meta property="og:type" content="website">
-    
-    <!-- Google Fonts -->
+    <meta property="og:url" content="https://ahmedelazabdev.github.io/tafqeet/">
+
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Async Font Loading (Eliminates Render-Blocking & Reduces Weight Chains) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap">
+    </noscript>
 
     <!-- Schema Markup: WebApplication & FAQPage -->
     <script type="application/ld+json">
@@ -26,7 +33,7 @@
         {
           "@type": "WebApplication",
           "name": "أداة تفقيط الأرقام المالية",
-          "url": "https://example.com/",
+          "url": "https://ahmedelazabdev.github.io/tafqeet/",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "All",
           "browserRequirements": "Requires JavaScript",
@@ -81,44 +88,98 @@
             --border: #e2e8f0;
             --accent: #f59e0b;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; }
-        header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        /* Font stack with system fallback matching metrics to fix CLS */
+        body { 
+            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            line-height: 1.7; 
+        }
+
+        header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 2rem; min-height: 65px; }
         .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        nav a { margin-right: 1.5rem; text-decoration: none; color: var(--text-muted); font-weight: 600; transition: color 0.2s; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        nav a { margin-right: 1.5rem; text-decoration: none; color: var(--text-muted); font-weight: 600; }
         nav a:hover { color: var(--primary); }
         .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
         
-        /* Tool Card */
-        .tool-card { background: var(--card-bg); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); border: 1px solid var(--border); margin-bottom: 3rem; }
-        .tool-card h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--primary); }
-        .tool-card p.subtitle { color: var(--text-muted); margin-bottom: 1.5rem; }
-        .form-group { margin-bottom: 1.2rem; }
-        label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
-        input[type="number"], select { width: 100%; padding: 0.8rem 1rem; font-size: 1.1rem; border: 2px solid var(--border); border-radius: 8px; outline: none; transition: border-color 0.2s; }
-        input[type="number"]:focus, select:focus { border-color: var(--primary); }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        /* Tool Card - Optimized to prevent CLS */
+        .tool-card { 
+            background: var(--card-bg); 
+            border-radius: 16px; 
+            padding: 2rem; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); 
+            border: 1px solid var(--border); 
+            margin-bottom: 3rem; 
+            contain: layout style;
+        }
+        .tool-card h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary); line-height: 1.3; min-height: 2.3rem; }
+        .tool-card p.subtitle { color: var(--text-muted); margin-bottom: 1.5rem; min-height: 1.7rem; }
         
-        .result-box { margin-top: 1.5rem; background: #f0fdf4; border: 2px dashed #86efac; border-radius: 12px; padding: 1.5rem; position: relative; }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.5rem; height: 1.5rem; line-height: 1.5rem; }
+        input[type="number"], select { 
+            width: 100%; 
+            height: 48px; 
+            padding: 0 1rem; 
+            font-size: 1.1rem; 
+            border: 2px solid var(--border); 
+            border-radius: 8px; 
+            outline: none; 
+            background-color: #fff;
+        }
+        input[type="number"]:focus, select:focus { border-color: var(--primary); }
+        
+        /* Grid with fixed minimum spacing to stop shifting */
+        .grid-2 { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1rem; 
+            min-height: 85px;
+        }
+        
+        .result-box { 
+            margin-top: 1.5rem; 
+            background: #f0fdf4; 
+            border: 2px dashed #86efac; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            position: relative; 
+            min-height: 110px;
+        }
         .result-title { font-size: 0.9rem; color: #15803d; font-weight: 700; margin-bottom: 0.5rem; }
-        .result-text { font-size: 1.3rem; font-weight: 700; color: #166534; word-break: break-word; min-height: 40px; }
-        .btn-copy { position: absolute; left: 1rem; top: 1rem; background: #fff; border: 1px solid #86efac; color: #166534; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600; }
+        .result-text { font-size: 1.25rem; font-weight: 700; color: #166534; word-break: break-word; min-height: 38px; }
+        .btn-copy { 
+            position: absolute; 
+            left: 1rem; 
+            top: 1rem; 
+            background: #fff; 
+            border: 1px solid #86efac; 
+            color: #166534; 
+            padding: 0.4rem 0.8rem; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-weight: 600; 
+        }
         .btn-copy:hover { background: #dcfce7; }
         
         /* Long SEO Content */
         .content-section { background: var(--card-bg); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); margin-bottom: 2rem; }
-        .content-section h2 { font-size: 1.5rem; color: var(--primary); margin: 1.8rem 0 1rem; position: relative; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f5f9; }
+        .content-section h2 { font-size: 1.45rem; color: var(--primary); margin: 1.8rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f1f5f9; }
         .content-section h3 { font-size: 1.2rem; margin: 1.2rem 0 0.6rem; color: var(--text-main); }
         .content-section p { margin-bottom: 1.2rem; color: #334155; }
-        .content-section ul, .content-section ol { margin: 0 1.5rem 1.5rem 0; color: #334155; }
+        .content-section ul { margin: 0 1.5rem 1.5rem 0; color: #334155; }
         .content-section li { margin-bottom: 0.5rem; }
         .faq-item { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
         .faq-item:last-child { border-bottom: none; }
         .faq-question { font-weight: 700; font-size: 1.15rem; color: var(--primary-hover); margin-bottom: 0.4rem; }
         
         footer { text-align: center; padding: 2rem; background: #fff; border-top: 1px solid var(--border); margin-top: 4rem; color: var(--text-muted); }
-        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { 
+            .grid-2 { grid-template-columns: 1fr; min-height: 170px; } 
+        }
     </style>
 </head>
 <body>
@@ -174,7 +235,7 @@
             </div>
         </div>
 
-        <!-- In-Depth SEO Optimized Content -->
+        <!-- Long SEO Content -->
         <article class="content-section">
             <h2>دليل تفقيط الأرقام: الأسس النحوية والاستخدامات المالية والمصرفية</h2>
             <p>
@@ -185,7 +246,7 @@
             <p>عند تحرير العقود التجارية أو كتابة الشيكات البنكية، تنص الأعراف المصرفية والقوانين التجارية في مختلف الدول العربية على قاعدة ذهبية: <strong>"في حال وجود أي خلاف بين المبلغ المكتوب بالأرقام والمبلغ المكتوب بالحروف، تُعتمد الحروف دائماً"</strong>. ومن هنا تنبع ضرورة وجود أداة تفقيط دقيقة تراعي أدق التفاصيل:</p>
             <ul>
                 <li><strong>درء التلاعب والإضافة:</strong> إضافة صفر إضافي إلى الرقم الحسابي (تحويل 1,000 إلى 10,000) أمر سهل الحدوث، بينما يستحيل إضافة كلمة "عشرة آلاف" فوق عبارة "فقط ألف ريال لا غير".</li>
-                <li><strong>الوضوح اللغوي المعتمد:</strong> تفادي الغموض الذي قد ينتج عن خط اليد السيئ عند ملء السندات البنكية يدوياً.</li>
+                <li><strong>الوضوح اللغوي المعتمد:</strong> تفادي الغموض الذي قد ينتج عن خط اليد عند ملء السندات البنكية يدوياً.</li>
                 <li><strong>التطابق المحاسبي والضريبي:</strong> تتطلب الفواتير الإلكترونية المعتمدة من هيئات الزكاة والضرائب مطابقة تامة بين مبالغ الضريبة المسجلة رقماً ونصاً.</li>
             </ul>
 
@@ -230,10 +291,9 @@
     </main>
 
     <footer>
-        <p>&copy;  جميع الحقوق محفوظة | أداة تفقيط الأرقام العربية المعتمدة</p>
+        <p>&copy; جميع الحقوق محفوظة | أداة تفقيط الأرقام العربية المعتمدة</p>
     </footer>
 
-    <!-- Pure Client-side High Performance Tafqeet Script -->
     <script>
         const ones = ["", "واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة"];
         const tens = ["", "عشرة", "عشرون", "ثلاثون", "أربعون", "خمسون", "ستون", "سبعون", "ثمانون", "تسعون"];
