@@ -13,17 +13,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedelazabdev.github.io/tafqeet/about.html">
 
-    <!-- Preconnect to Fonts CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Async Font Loading (Zero CLS) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    </noscript>
-
     <style>
         :root {
             --primary: #0f766e;
@@ -37,11 +26,13 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
+        /* Native High-Performance Arabic Font Stack (Zero Latency - Zero CLS) */
         body { 
-            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, Arial, sans-serif; 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main); 
             line-height: 1.8; 
+            -webkit-font-smoothing: antialiased;
         }
 
         header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 2rem; min-height: 65px; }
@@ -93,36 +84,33 @@
             <h1>من نحن - مهمتنا ورؤيتنا</h1>
             
             <p>
-                تم إطلاق <strong>أداة تفقيط الأرقام</strong> بهدف سد فجوة واضحة في المحتوى الرقمي العربي؛ حيث عانت معظم الأدوات القديمة من بطء التحميل، كثرة الإعلانات المنبثقة، والأهم من ذلك: الوقوع في أخطاء نحوية شائعة في قواعد العدد والمعدود تؤدي إلى مشكلات حقيقية عند إصدار الشيكات أو توقيع العقود الرسمية.
+                تم إطلاق <strong>أداة تفقيط الأرقام</strong> لتوفير حل عربي تقني موثوق، فوري وخالٍ تماماً من الأخطاء النحوية في تحويل الأرقام إلى كلمات ونصوص باللغة العربية الفصحى.
             </p>
 
             <h2>رؤيتنا</h2>
             <p>
-                أن نكون المرجع الرقمي الأول والأكثر موثوقية في الوطن العربي لكافة المحاسبين، وأصحاب الأعمال، والمطورين، والجهات القانونية التي تحتاج إلى صياغة نصية خالية من الأخطاء للمبالغ والقيود المالية.
+                أن تكون منصتنا المرجع الأول لكل محاسب، صاحب عمل، أو مدقق مالي يبحث عن مطابقة قانونية دقيقة للمبالغ المالية للشيكات وسندات الصرف والقبض وفق ضوابط مجمع اللغة العربية.
             </p>
 
             <div class="feature-box">
-                <strong>الركائز الأساسية التي بنينا عليها أداتنا:</strong>
+                <strong>ثوابتنا الأساسية:</strong>
                 <p style="margin-top: 0.5rem; margin-bottom: 0;">
-                    الدقة اللغوية الصارمة، المعالجة اللحظية بدون تأخير (Zero Latency)، واحترام خصوصية المستخدم المالية بعدم حفظ أو نقل أي رقم لخوادم خارجية.
+                    الدقة اللغوية الصارمة، المعالجة اللحظية بدون تأخير (Zero Latency)، والخصوصية الكاملة لبياناتك بعدم إرسال أي أرقام إلى خوادم خارجية.
                 </p>
             </div>
 
-            <h2>الالتزام بالقواعد النحوية والمصرفية</h2>
-            <p>
-                صُممت خوارزمية التفقيط في موقعنا لتتوافق مع الضوابط الصادرة عن مجمع اللغة العربية والأعراف المصرفية للبنوك العربية، وتشمل:
-            </p>
+            <h2>الالتزام بالمعايير المحاسبية والمصرفية</h2>
             <ul>
-                <li><strong>ضبط أحكام التمييز والتذكير والتأنيث:</strong> مراعاة مخالفة الأعداد من (3 إلى 9) ومطابقة الأعداد المركبة وألفاظ العقود.</li>
-                <li><strong>الصيغة القانونية المانعة للتحريف:</strong> التوليد التلقائي لشرط الحماية البنكي المصاغ بعبارة (فقط ... لا غير).</li>
-                <li><strong>فصل وتدقيق الكسور المالية:</strong> صياغة الهللات، القروش، الفلسات، والسنتات بدقة متناهية توافق أنظمة الفوترة الإلكترونية.</li>
+                <li><strong>ضبط أحكام العدد والمعدود:</strong> مراعاة قواعد التمييز، التذكير والتأنيث، وألفاظ العقود.</li>
+                <li><strong>الصيغة القانونية المانعة للتلاعب:</strong> وضع عبارة (فقط ... لا غير) تلقائياً لحماية الشيكات والعقود.</li>
+                <li><strong>تغطية شاملة للعملات:</strong> دعم العملات العربية والعالمية مع وحداتها الفرعية (هللة، قرش، فلس، سنت).</li>
             </ul>
 
-            <h2>لماذا يفضل المحاسبون استخدام أداتنا؟</h2>
+            <h2>لماذا تختار أداتنا؟</h2>
             <ul>
-                <li><strong>أداء فائق السرعة:</strong> الأداة تعمل من طرف العميل مباشرة دون الحاجة لإعادة تحميل الصفحة.</li>
-                <li><strong>تصميم متجاوب ومريح:</strong> واجهة عصرية هادئة صُممت خصيصاً لتسهيل العمل المكتبي والمحاسبي اليومي.</li>
-                <li><strong>نسخ بضغطة زر:</strong> إمكانية نسخ النص المفقط فورياً ولصقه في برامجك المحاسبية أو ملفات Word و Excel.</li>
+                <li><strong>سرعة فائقة:</strong> كود محلي يعمل في المتصفح بلمح البصر دون انتظار استجابة الخادم.</li>
+                <li><strong>متوافقة مع جميع الأجهزة:</strong> تصميم نظيف وعصري يعمل بسلاسة على الهواتف والأجهزة اللوحية والمكتبية.</li>
+                <li><strong>نسخ فوري:</strong> زر مخصص لنسخ النص المصاغ مباشرة بنقرة واحدة.</li>
             </ul>
         </article>
     </main>
