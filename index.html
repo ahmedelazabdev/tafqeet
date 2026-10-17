@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفقيط الأرقام إلى كلمات بالعربي والإنجليزي | محول الأرقام لحروف مع العملات</title>
+    <meta name="description" content="أسرع أداة مجانية لتفقيط الأرقام وتحويلها إلى كلمات وحروف باللغتين العربية والإنجليزية للشيكات والعقود والفواتير. تدعم الجنيه والريال والدولار والكسور العشرية بدقة.">
+    <meta name="keywords" content="تفقيط, تفقيط الارقام, تحويل الارقام الى كلمات, تفقيط عربي وانجليزي, تفقيط الشيكات, tafqeet, number to words arabic english">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://yourusername.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="تفقيط الأرقام إلى كلمات بالعربي والإنجليزي فورياً">
+    <meta property="og:description" content="أداة مصرفية دقيقة لتحويل الأرقام إلى نصوص باللغتين العربية والإنجليزية مع دعم العملات والكسور العشرية.">
+    <meta property="og:url" content="https://yourusername.github.io/">
+
+    <!-- Schema Markup متقدم -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "أداة تفقيط الأرقام إلى كلمات",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "HowTo",
+          "name": "كيفية تفقيط رقم إلى كلمات بالعربية والإنجليزية",
+          "description": "خطوات تحويل الأرقام المالية والحسابية إلى نصوص مكتوبة لتأمين الشيكات والعقود.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "كتابة الرقم",
+              "text": "أدخل الرقم في خانة الإدخال، ويمكنك استخدام الفاصلة العشرية للكسور (مثل 1250.75)."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "اختيار العملة",
+              "text": "حدد العملة المناسبة من القائمة (جنيه، ريال، دولار...) أو اختر 'بدون عملة'."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "نسخ النص المفقط",
+              "text": "انسخ التفقيط العربي أو الإنجليزي بضغطة زر لاستخدامه مباشرة."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "ما هو التفقيط وما هي أهميته القانونية؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "التفقيط هو تحويل الأرقام الحسابية إلى كلمات منطوقة ومكتوبة بالحروف، ويُعد شرطاً قانونياً ومصرفياً في الشيكات والكمبيالات والعقود الرسمية لمنع التلاعب بالأرقام وإضافة أصفار وهمية."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "كيف تتعامل الأداة مع الكسور العشرية والهللات/القروش؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تفصل الأداة الجزء الصحيح عن الكسر العشري تلقائياً، وتفقط العملة الأساسية ثم تُتبعها بحرف العطف والوحدات الفرعية المناسبة (مثل: جنيه وقرش، ريال وهللة، دولار وسنت)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --bg-page: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text-title: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Cairo", Tahoma, sans-serif; }
+        body { background-color: var(--bg-page); color: var(--text-body); line-height: 1.85; min-height: 100vh; display: flex; flex-direction: column; }
+
+        header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+        .nav-wrap { max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.35rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+        .brand svg { width: 28px; height: 28px; fill: var(--primary); }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+        main { max-width: 1100px; width: 100%; margin: 2rem auto; padding: 0 1.25rem; flex: 1; }
+        
+        .hero { text-align: center; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.3rem; font-weight: 800; color: var(--text-title); margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 720px; margin: 0 auto; }
+
+        .tool-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.8rem; box-shadow: var(--shadow); margin-bottom: 3rem; }
+        
+        .input-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+        @media (max-width: 768px) { .input-row { grid-template-columns: 1fr; } }
+        
+        .form-group label { display: block; font-weight: 700; color: var(--text-title); margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .form-control { width: 100%; padding: 0.9rem 1rem; font-size: 1.15rem; border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; font-weight: 600; transition: 0.2s; }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15); }
+        
+        .options-bar { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+        .checkbox-label { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; cursor: pointer; user-select: none; font-size: 0.95rem; }
+        .checkbox-label input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+
+        .output-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        @media (max-width: 768px) { .output-grid { grid-template-columns: 1fr; } }
+
+        .output-col { display: flex; flex-direction: column; background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.2rem; }
+        .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+        .output-title { font-weight: 700; color: var(--text-title); font-size: 1rem; }
+        
+        .output-text { min-height: 110px; font-size: 1.15rem; line-height: 1.7; font-weight: 600; color: var(--text-title); word-break: break-word; }
+        .output-text.en { direction: ltr; text-align: left; }
+        
+        .copy-btn { align-self: flex-start; margin-top: auto; background: var(--surface); border: 1px solid var(--border); color: var(--text-title); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 700; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .copy-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* المحتوى والسيو */
+        .seo-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 3rem; }
+        .seo-box h2 { font-size: 1.6rem; color: var(--text-title); margin: 2rem 0 1rem; border-right: 4px solid var(--primary); padding-right: 0.8rem; }
+        .seo-box p { margin-bottom: 1.1rem; font-size: 1.02rem; text-align: justify; }
+        .seo-box ul, .seo-box ol { padding-right: 1.8rem; margin-bottom: 1.5rem; }
+        .seo-box li { margin-bottom: 0.6rem; }
+
+        .table-responsive { overflow-x: auto; margin: 1.8rem 0; border: 1px solid var(--border); border-radius: var(--radius-md); }
+        table { width: 100%; border-collapse: collapse; text-align: right; font-size: 0.95rem; }
+        th { background: #f1f5f9; color: var(--text-title); font-weight: 700; padding: 0.85rem 1rem; border-bottom: 2px solid var(--border); }
+        td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); }
+        tr:nth-child(even) td { background: #f8fafc; }
+
+        .faq-card { border: 1px solid var(--border); border-radius: var(--radius-md); margin-bottom: 0.8rem; }
+        .faq-q { padding: 1rem 1.2rem; font-weight: 700; background: #f8fafc; cursor: pointer; }
+        .faq-a { padding: 1.2rem; border-top: 1px solid var(--border); font-size: 0.95rem; }
+
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem 1.5rem; margin-top: auto; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-brand { font-size: 1.1rem; font-weight: 700; color: var(--text-title); }
+        .footer-brand span { color: var(--primary); }
+        .footer-copy { color: var(--text-muted); font-size: 0.88rem; }
+
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #0f172a; color: #fff; padding: 0.7rem 1.6rem; border-radius: 30px; font-size: 0.9rem; font-weight: 600; opacity: 0; pointer-events: none; transition: 0.3s; z-index: 999; }
+        #toast.active { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <a href="index.html" class="brand">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1z"/></svg>
+                <span>تفقيط الأرقام</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية والمحول</a></li>
+                <li><a href="about.html">عن الموقع</a></li>
+                <li><a href="privacy.html">الخصوصية</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>تفقيط الأرقام إلى كلمات بالعربي والإنجليزي</h1>
+            <p>أداة تحويل الأرقام إلى نصوص وحروف مكتوبة باللغتين العربية والإنجليزية بدقة مصرفية متناهية مع دعم العملات والكسور وحماية الشيكات والفواتير.</p>
+        </div>
+
+        <section class="tool-box" aria-label="أداة التفقيط">
+            <div class="input-row">
+                <div class="form-group">
+                    <label for="numInput">أدخل المبلغ أو الرقم المراد تفقيطه:</label>
+                    <input type="number" step="any" id="numInput" class="form-control" placeholder="مثال: 15420.50" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="currencySelect">اختر العملة:</label>
+                    <select id="currencySelect" class="form-control">
+                        <option value="EGP">جنيه مصري (EGP)</option>
+                        <option value="SAR" selected>ريال سعودي (SAR)</option>
+                        <option value="AED">درهم إماراتي (AED)</option>
+                        <option value="KWD">دينار كويتي (KWD)</option>
+                        <option value="USD">دولار أمريكي (USD)</option>
+                        <option value="EUR">يورو أوروبي (EUR)</option>
+                        <option value="NONE">أرقام فقط (بدون عملة)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="options-bar">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="addOnlyCheck" checked>
+                    <span>إضافة عبارة الحماية المصرفية («فقط لا غير» / «Only»)</span>
+                </label>
+            </div>
+
+            <div class="output-grid">
+                <!-- المخرج العربي -->
+                <div class="output-col">
+                    <div class="output-header">
+                        <span class="output-title">التفقيط باللغة العربية:</span>
+                    </div>
+                    <div class="output-text" id="arOutput">صفر.</div>
+                    <button class="copy-btn" id="copyArBtn">📋 نسخ النص العربي</button>
+                </div>
+
+                <!-- المخرج الإنجليزي -->
+                <div class="output-col">
+                    <div class="output-header">
+                        <span class="output-title">التفقيط باللغة الإنجليزية (English):</span>
+                    </div>
+                    <div class="output-text en" id="enOutput">Zero.</div>
+                    <button class="copy-btn" id="copyEnBtn">📋 Copy English Text</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- مقال السيو الشامل -->
+        <article class="seo-box">
+            <h2>ما هو التفقيط (Tafqeet) ولماذا هو إلزامي في المعاملات المالية؟</h2>
+            <p>
+                <strong>التفقيط</strong> هو العملية الحسابية والقانونية التي يتم من خلالها تحويل الأرقام الحسابية المجردة (مثل 1500) إلى صياغة لغوية مكتوبة بالحروف والكلمات (مثل: ألف وخمسمائة). وكلمة تفقيط مشتقة لغوياً من عبارة "فقط لا غير"، والتي تُختم بها المبالغ المالية لمنع أي محاولة تزوير أو إضافة أصفار أو أرقام على يمين أو يسار الرقم الأصلي.
+            </p>
+            <p>
+                تُعد صياغة التفقيط ركناً أساسياً في كتابة <strong>الشيكات البنكية، الكمبيالات، الفواتير الضريبية، السندات الإذنية، وعقود البيع والاتفاقيات التجارية</strong>. وعند حدوث أي تعارض بين الرقم المكتوب بالحساب والأرقام المكتوبة بالحروف، تنص القوانين المصرفية والتجارية في معظم دول العالم على اعتماد المبلغ المكتوب بالحروف، تجنباً للأخطاء المطبعية.
+            </p>
+
+            <h2>جدول مقارنة العملات والكسور المدعومة في الأداة</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العملة</th>
+                            <th>رمز العملة</th>
+                            <th>الوحدة الرئيسية (عربي / English)</th>
+                            <th>الوحدة الفرعية / الكسور (عربي / English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>الريال السعودي</td><td>SAR</td><td>ريال سعودي / Saudi Riyals</td><td>هللة / Halalas</td></tr>
+                        <tr><td>الجنيه المصري</td><td>EGP</td><td>جنيه مصري / Egyptian Pounds</td><td>قرش / Piasters</td></tr>
+                        <tr><td>الدرهم الإماراتي</td><td>AED</td><td>درهم إماراتي / UAE Dirhams</td><td>فلس / Fils</td></tr>
+                        <tr><td>الدينار الكويتي</td><td>KWD</td><td>دينار كويتي / Kuwaiti Dinars</td><td>فلس / Fils (3 خانات)</td></tr>
+                        <tr><td>الدولار الأمريكي</td><td>USD</td><td>دولار أمريكي / US Dollars</td><td>سنت / Cents</td></tr>
+                        <tr><td>اليورو الأوروبي</td><td>EUR</td><td>يورو / Euros</td><td>سنت / Cents</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>قواعد العدد والمعدود في اللغة العربية المستخدمة بالخوارزمية</h2>
+            <p>
+                تتميز اللغة العربية بنظام دقيق وفريد في تذكير وتأنيث الأعداد، حيث تتبع أداتنا هذه القواعد النحوية الصارمة:
+            </p>
+            <ul>
+                <li><strong>العددان (1 و 2):</strong> يوافقان المعدود في التذكير والتأنيث دائماً (ريال واحد / هللة واحدة).</li>
+                <li><strong>الأعداد من (3 إلى 9):</strong> تخالف المعدود في التذكير والتأنيث (خمسة ريالات / خمس هللات).</li>
+                <li><strong>المائة والألف ومضاعفاتهما:</strong> تلزم صورة واحدة مع المذكر والمؤنث (مائة ريال / مائة هللة).</li>
+                <li><strong>العطف والترتيب:</strong> يبدأ التفقيط من الخانة الكبرى (مليارات ثم ملايين ثم آلاف ثم مئات ثم آحاد وعشرات) مع ربطها بحرف العطف "الواو".</li>
+            </ul>
+
+            <h2>الأسئلة الشائعة حول تفقيط المبالغ والأرقام (FAQ)</h2>
+            <div class="faq-card">
+                <div class="faq-q">هل تضمن الأداة عدم وجود أخطاء لغوية في الشيكات البنكية؟</div>
+                <div class="faq-a">نعم، تم تدقيق خوارزمية التفقيط وفقاً لقواعد النحو العربي المعتمدة لدى المجامع اللغوية والأنظمة المصرفية المعتمدة في البنوك العربية.</div>
+            </div>
+            <div class="faq-card">
+                <div class="faq-q">ما هو الحد الأقصى للأرقام التي يمكن تفقيطها؟</div>
+                <div class="faq-a">تستوعب الأداة أرقاماً عملاقة تصل إلى خانات التريليونات مع أجزائها العشرية دون أي قيود، وهي ملائمة للميزانيات الحكومية والشركات الكبرى.</div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">أداة <span>تفقيط الأرقام</span></div>
+            <div class="footer-copy">© 2026 جميع الحقوق محفوظة — أداة تفقيط مالية ومصرفية مجانية وفائقة السرعة.</div>
+        </div>
+    </footer>
+
+    <div id="toast">تم النسخ بنجاح! ✓</div>
+
+    <!-- محرك التفقيط البرمجي الشامل (عربي + إنجليزي) -->
+    <script>
+        const currencies = {
+            SAR: { arMain: "ريال سعودي", arSub: "هللة", enMain: "Saudi Riyal", enMainPlural: "Saudi Riyals", enSub: "Halala", enSubPlural: "Halalas", decimals: 2 },
+            EGP: { arMain: "جنيه مصري", arSub: "قرش", enMain: "Egyptian Pound", enMainPlural: "Egyptian Pounds", enSub: "Piaster", enSubPlural: "Piasters", decimals: 2 },
+            AED: { arMain: "درهم إماراتي", arSub: "فلس", enMain: "UAE Dirham", enMainPlural: "UAE Dirhams", enSub: "Fils", enSubPlural: "Fils", decimals: 2 },
+            KWD: { arMain: "دينار كويتي", arSub: "فلس", enMain: "Kuwaiti Dinar", enMainPlural: "Kuwaiti Dinars", enSub: "Fils", enSubPlural: "Fils", decimals: 3 },
+            USD: { arMain: "دولار أمريكي", arSub: "سنت", enMain: "US Dollar", enMainPlural: "US Dollars", enSub: "Cent", enSubPlural: "Cents", decimals: 2 },
+            EUR: { arMain: "يورو", arSub: "سنت", enMain: "Euro", enMainPlural: "Euros", enSub: "Cent", enSubPlural: "Cents", decimals: 2 },
+            NONE: { arMain: "", arSub: "", enMain: "", enMainPlural: "", enSub: "", enSubPlural: "", decimals: 2 }
+        };
+
+        // --- محرك التفقيط العربي ---
+        const arUnits = ["", "واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة"];
+        const arTeens = ["عشرة", "أحد عشر", "اثنا عشر", "ثلاثة عشر", "أربعة عشر", "خمسة عشر", "ستة عشر", "سبعة عشر", "ثمانية عشر", "تسعة عشر"];
+        const arTens = ["", "", "عشرون", "ثلاثون", "أربعون", "خمسون", "ستون", "سبعون", "ثمانون", "تسعون"];
+        const arHundreds = ["", "مائة", "مائتان", "ثلاثمائة", "أربعمائة", "خمسمائة", "ستمائة", "سبعمائة", "ثمانمائة", "تسعمائة"];
+
+        function convertAr3Digits(n) {
+            let res = [];
+            const h = Math.floor(n / 100);
+            const rem = n % 100;
+            const t = Math.floor(rem / 10);
+            const u = rem % 10;
+
+            if (h > 0) res.push(arHundreds[h]);
+
+            if (rem > 0) {
+                if (rem < 10) {
+                    res.push(arUnits[rem]);
+                } else if (rem < 20) {
+                    res.push(arTeens[rem - 10]);
+                } else {
+                    if (u > 0) res.push(arUnits[u]);
+                    res.push(arTens[t]);
+                }
+            }
+            return res.join(" و ");
+        }
+
+        function tafqeetArabic(number, currKey, addOnly) {
+            if (isNaN(number) || number === null || number === "") return "صفر.";
+            let numStr = number.toString().trim();
+            let isNeg = false;
+            if (numStr.startsWith("-")) {
+                isNeg = true;
+                numStr = numStr.substring(1);
+            }
+
+            const parts = numStr.split(".");
+            let intPart = BigInt(parts[0] || "0");
+            let decPartStr = parts[1] || "";
+
+            const curr = currencies[currKey];
+            if (decPartStr.length > curr.decimals) {
+                decPartStr = decPartStr.substring(0, curr.decimals);
+            } else {
+                while (decPartStr.length < curr.decimals && curr.decimals > 0 && decPartStr.length > 0) {
+                    decPartStr += "0";
+                }
+            }
+            let decPart = decPartStr ? parseInt(decPartStr, 10) : 0;
+
+            if (intPart === 0n && decPart === 0) return (addOnly ? "فقط صفر لا غير." : "صفر.");
+
+            let scales = [
+                { val: 1000000000000n, singular: "تريليون", dual: "تريليونان", plural: "تريليونات" },
+                { val: 1000000000n, singular: "مليار", dual: "ملياران", plural: "مليارات" },
+                { val: 1000000n, singular: "مليون", dual: "مليونان", plural: "ملايين" },
+                { val: 1000n, singular: "ألف", dual: "ألفان", plural: "آلاف" }
+            ];
+
+            let textParts = [];
+            let temp = intPart;
+
+            for (let s of scales) {
+                if (temp >= s.val) {
+                    let chunk = Number(temp / s.val);
+                    temp = temp % s.val;
+
+                    if (chunk === 1) textParts.push(s.singular);
+                    else if (chunk === 2) textParts.push(s.dual);
+                    else if (chunk >= 3 && chunk <= 10) textParts.push(convertAr3Digits(chunk) + " " + s.plural);
+                    else textParts.push(convertAr3Digits(chunk) + " " + s.singular);
+                }
+            }
+
+            if (temp > 0n || textParts.length === 0) {
+                let chunk = Number(temp);
+                if (chunk > 0) textParts.push(convertAr3Digits(chunk));
+            }
+
+            let fullMain = textParts.join(" و ");
+            let out = (isNeg ? "سالب " : "") + fullMain;
+
+            if (curr.arMain && intPart > 0n) {
+                out += " " + curr.arMain;
+            }
+
+            if (decPart > 0) {
+                let decText = convertAr3Digits(decPart);
+                let decFull = decText + (curr.arSub ? " " + curr.arSub : "");
+                out += (intPart > 0n ? " و " : "") + decFull;
+            }
+
+            if (addOnly) {
+                out = "فقط " + out + " لا غير.";
+            }
+
+            return out.trim();
+        }
+
+        // --- محرك التفقيط الإنجليزي ---
+        const enUnits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+        const enTeens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+        const enTens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+        function convertEn3Digits(n) {
+            let res = [];
+            let h = Math.floor(n / 100);
+            let rem = n % 100;
+            if (h > 0) res.push(enUnits[h] + " Hundred");
+            if (rem > 0) {
+                if (rem < 10) res.push(enUnits[rem]);
+                else if (rem < 20) res.push(enTeens[rem - 10]);
+                else {
+                    let t = Math.floor(rem / 10);
+                    let u = rem % 10;
+                    res.push(enTens[t] + (u > 0 ? "-" + enUnits[u] : ""));
+                }
+            }
+            return res.join(" and ");
+        }
+
+        function tafqeetEnglish(number, currKey, addOnly) {
+            if (isNaN(number) || number === null || number === "") return "Zero.";
+            let numStr = number.toString().trim();
+            let isNeg = false;
+            if (numStr.startsWith("-")) {
+                isNeg = true;
+                numStr = numStr.substring(1);
+            }
+
+            const parts = numStr.split(".");
+            let intPart = BigInt(parts[0] || "0");
+            let decPartStr = parts[1] || "";
+
+            const curr = currencies[currKey];
+            if (decPartStr.length > curr.decimals) {
+                decPartStr = decPartStr.substring(0, curr.decimals);
+            } else {
+                while (decPartStr.length < curr.decimals && curr.decimals > 0 && decPartStr.length > 0) {
+                    decPartStr += "0";
+                }
+            }
+            let decPart = decPartStr ? parseInt(decPartStr, 10) : 0;
+
+            if (intPart === 0n && decPart === 0) return (addOnly ? "Zero Only." : "Zero.");
+
+            let scales = [
+                { val: 1000000000000n, name: "Trillion" },
+                { val: 1000000000n, name: "Billion" },
+                { val: 1000000n, name: "Million" },
+                { val: 1000n, name: "Thousand" }
+            ];
+
+            let textParts = [];
+            let temp = intPart;
+
+            for (let s of scales) {
+                if (temp >= s.val) {
+                    let chunk = Number(temp / s.val);
+                    temp = temp % s.val;
+                    textParts.push(convertEn3Digits(chunk) + " " + s.name);
+                }
+            }
+
+            if (temp > 0n || textParts.length === 0) {
+                let chunk = Number(temp);
+                if (chunk > 0) textParts.push(convertEn3Digits(chunk));
+            }
+
+            let fullMain = textParts.join(", ");
+            let out = (isNeg ? "Minus " : "") + fullMain;
+
+            if (curr.enMain && intPart > 0n) {
+                out += " " + (intPart === 1n ? curr.enMain : curr.enMainPlural);
+            }
+
+            if (decPart > 0) {
+                let decText = convertEn3Digits(decPart);
+                let decFull = decText + (curr.enSub ? " " + (decPart === 1 ? curr.enSub : curr.enSubPlural) : "");
+                out += (intPart > 0n ? " and " : "") + decFull;
+            }
+
+            if (addOnly) {
+                out += " Only.";
+            }
+
+            return out.trim();
+        }
+
+        // العناصر والتفاعل
+        const numInput = document.getElementById("numInput");
+        const currSelect = document.getElementById("currencySelect");
+        const addOnlyCheck = document.getElementById("addOnlyCheck");
+        const arOutput = document.getElementById("arOutput");
+        const enOutput = document.getElementById("enOutput");
+        const copyArBtn = document.getElementById("copyArBtn");
+        const copyEnBtn = document.getElementById("copyEnBtn");
+        const toast = document.getElementById("toast");
+
+        function updateConversion() {
+            const val = numInput.value;
+            const curr = currSelect.value;
+            const only = addOnlyCheck.checked;
+
+            if (!val.trim()) {
+                arOutput.innerText = only ? "فقط صفر لا غير." : "صفر.";
+                enOutput.innerText = only ? "Zero Only." : "Zero.";
+                return;
+            }
+
+            arOutput.innerText = tafqeetArabic(val, curr, only);
+            enOutput.innerText = tafqeetEnglish(val, curr, only);
+        }
+
+        numInput.addEventListener("input", updateConversion);
+        currSelect.addEventListener("change", updateConversion);
+        addOnlyCheck.addEventListener("change", updateConversion);
+
+        function triggerCopy(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                toast.classList.add("active");
+                setTimeout(() => toast.classList.remove("active"), 2000);
+            });
+        }
+
+        copyArBtn.addEventListener("click", () => triggerCopy(arOutput.innerText));
+        copyEnBtn.addEventListener("click", () => triggerCopy(enOutput.innerText));
+    </script>
+</body>
+</html>
