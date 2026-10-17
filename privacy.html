@@ -13,17 +13,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedelazabdev.github.io/tafqeet/privacy.html">
 
-    <!-- Preconnect to Fonts CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Async Font Loading (Zero CLS) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=optional">
-    </noscript>
-
     <style>
         :root {
             --primary: #0f766e;
@@ -37,11 +26,13 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
+        /* Native High-Performance Arabic Font Stack (Zero Latency - Zero CLS) */
         body { 
-            font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, Arial, sans-serif; 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main); 
             line-height: 1.8; 
+            -webkit-font-smoothing: antialiased;
         }
 
         header { background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 2rem; min-height: 65px; }
@@ -92,43 +83,43 @@
             <h1>سياسة الخصوصية وسرية المعلومات</h1>
             
             <p>
-                نولي في <strong>أداة تفقيط الأرقام</strong> أهمية بالغة لخصوصية وأمان مستخدمينا الكرام. توضح هذه الوثيقة طبيعة المعلومات التي نتعامل معها، ونؤكد التزامنا التام بعدم انتهاك خصوصية معاملاتك المالية أو بياناتك الشخصية بأي شكل من الأشكال.
+                نولي في <strong>أداة تفقيط الأرقام</strong> أهمية قصوى لخصوصية وأمان بياناتك المالية، ونلتزم بأعلى معايير الشفافية وفق المتطلبات القياسية العامة لحماية البيانات (GDPR) ومعايير Google AdSense.
             </p>
 
             <div class="privacy-highlight">
                 <strong>مبدأ المعالجة المحلية (Client-Side Privacy):</strong>
                 <p style="margin-top: 0.5rem; margin-bottom: 0;">
-                    جميع العمليات الحسابية والتحويلية للأرقام والمبالغ المالية تتم بالكامل داخل متصفح الإنترنت الخاص بك دون إرسال أو تخزين أي رقم في أي خادم خارجي.
+                    جميع العمليات الحسابية لتحويل الأرقام إلى نصوص تجري بالكامل داخل متصفح الإنترنت في جهازك، دون إرسال أو تخزين أي رقم في أي خادم خارجي.
                 </p>
             </div>
 
-            <h2>1. البيانات المالية التي تدخلها</h2>
+            <h2>1. سرية الأرقام والمبالغ المالية</h2>
             <p>
-                عند استخدامك لأداة التفقيط وكتابة أي مبالغ مالية لشيكات أو فواتير، يتم تحويل الرقم عبر كود JavaScript يعمل محلياً في جهازك. نحن <strong>لا نملك حق الوصول، ولا نقوم بتسجيل، ولا نخزن</strong> أي أرقام أو نصوص تنتج عن استخدام الأداة.
+                لا نحتفظ، ولا نسجل، ولا نطلع على أي أرقام أو شيكات تقوم بإدخالها في الأداة. كود التحويل يعمل كلياً على بيئة العميل (Client-Side JavaScript) وينتهي تأثيره بمجرد إغلاق المتصفح.
             </p>
 
-            <h2>2. ملفات تعريف الارتباط (Cookies) وإعلانات الطرف الثالث</h2>
+            <h2>2. ملفات تعريف الارتباط (Cookies) والخدمات الإعلانية</h2>
             <p>
-                قد نعتمد على خدمات إعلانية وتحليلية معتمدة من أطراف ثالثة (مثل Google AdSense و Google Analytics) للمساعدة في تمويل الموقع وتقديم خدماتنا مجاناً:
+                قد نستخدم خدمات إعلانية وتحليلية موثوقة من أطراف ثالثة (مثل Google AdSense و Google Analytics) لتوفير خدمات الموقع مجاناً:
             </p>
             <ul>
-                <li>تستخدم شركة Google ملفات تعريف الارتباط (بما في ذلك ملف DART) لعرض إعلانات للمستخدمين استناداً إلى زياراتهم لموقعنا ومواقع أخرى على الويب.</li>
-                <li>يمكن للمستخدمين إلغاء استخدام ملف تعريف الارتباط DART بزيارة سياسة الخصوصية الخاصة بإعلانات Google وشبكة المحتوى.</li>
+                <li>تستخدم شركة Google ملفات تعريف الارتباط لعرض إعلانات ملائمة للمستخدم بناءً على زياراته السابقة لهذا الموقع ومواقع أخرى على الويب.</li>
+                <li>يمكنك تعطيل ملفات تعريف الارتباط الإعلانية المخصصة في أي وقت عبر إعدادات إعلانات Google.</li>
             </ul>
 
-            <h2>3. ملفات السجل (Log Files)</h2>
+            <h2>3. ملفات السجل القياسية (Log Files)</h2>
             <p>
-                مثل معظم مواقع الويب، قد يقوم الخادم المضيف (GitHub Pages) بجمع معلومات قياسية غير شخصية تتضمن: نوع المتصفح، عنوان مزود خدمة الإنترنت (ISP)، والصفحات التي تمت زيارتها، وذلك لأغراض فنية تتعلق بإدارة النظام وصيانته فقط.
+                يقوم الخادم المضيف (GitHub Pages) بتسجيل بيانات قياسية غير شخصية روتينية مثل نوع المتصفح وتاريخ الزيارة لأغراض فنية وتشغيلية متعلقة باستقرار الخدمة فقط.
             </p>
 
-            <h2>4. حماية بيانات الأطفال</h2>
+            <h2>4. خصوصية الأطفال</h2>
             <p>
-                لا يجمع موقعنا عن عمد أي معلومات تعريف شخصية من الأطفال دون سن 13 عاماً، ومحتوى الموقع موجه للعامة وللمهام المحاسبية والتثقيفية.
+                الموقع أداة محاسبية تعليمية عامة، ولا يقوم بجمع أي معلومات تعريفية شخصية من الأطفال دون سن 13 عاماً.
             </p>
 
-            <h2>5. الموافقة والتحديثات</h2>
+            <h2>5. التحديثات والموافقة</h2>
             <p>
-                باستخدامك لموقعنا، فإنك توافق على سياسة الخصوصية الخاصة بنا وتوافق على شروطها. يحق لنا تحديث هذه السياسة عند الضرورة، ويتم إدراج أي تعديلات مباشرة على هذه الصفحة.
+                استخدامك للموقع يعني موافقتك على بنود سياسة الخصوصية هذه. يحق لنا تحديث السياسة دورياً ويتم نشر أي تعديل على هذه الصفحة مباشرة.
             </p>
         </article>
     </main>
