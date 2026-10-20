@@ -8,7 +8,7 @@
   <!-- High CTR SEO Meta -->
   <title>أدق أداة تفقيط الأرقام إلى كلمات عربي وإنجليزي ⚡ تحويل المبالغ والشيكات فورياً مجاناً</title>
   <meta name="description" content="أقوى أداة تفقيط الأرقام وتحويل الأعداد والمبالغ المالية إلى حروف باللغة العربية والإنجليزية بضغطة زر. تدعم جميع العملات (جنيه، ريال، درهم، دينار، دولار) لكتابة الشيكات والعقود والفواتير بدقة 100%.">
-  <meta name="keywords" content="تفقيط, تفقيط الارقام, تحويل الارقام الى كلمات, تفقيط عربي, تفقيet انجليزي, تحويل المبالغ الى حروف, تفقيط الشيكات, number to words arabic, tafqeet">
+  <meta name="keywords" content="تفقيط, تفقيط الارقام, تحويل الارقام الى كلمات, تفقيط عربي, تفقيط انجليزي, تحويل المبالغ الى حروف, تفقيط الشيكات, number to words arabic, tafqeet">
   <meta name="author" content="Ahmed Elazab">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   
@@ -26,15 +26,6 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="أداة تفقيط الأرقام الفورية (عربي وإنجليزي) ⚡ دقة 100%">
   <meta name="twitter:description" content="أسرع محول أرقام إلى حروف للمحاسبين وكتابة الشيكات والفواتير بدون أخطاء إملائية أو لغوية.">
-
-  <!-- Speed Optimization: Fonts DNS & Zero-CLS Async Font Loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=optional">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=optional" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=optional">
-  </noscript>
 
   <!-- Complete Structured Data: WebApplication, FAQPage & HowTo -->
   <script type="application/ld+json">
@@ -62,7 +53,7 @@
           {
             "@type": "HowToStep",
             "name": "إدخال المبلغ أو الرقم",
-            "text": "اكتب الرقم أو المبلغ المالي في خانة الإدخال، ويمكنك تضمين الكسور العشرية مثل (1250.75)."
+            "text": "اكتب الرقم أو المبلغ المالي في خانة الإدخال، ويمكنك تضمين الكسور العشرية مثل (15420.75)."
           },
           {
             "@type": "HowToStep",
@@ -134,7 +125,8 @@
       --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
       --shadow-xl: 0 10px 25px -5px rgba(0,0,0,0.08);
       --radius: 14px;
-      --font-stack: 'Cairo', system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;
+      /* Zero-CLS High Performance Native Arabic Font Stack */
+      --font-stack: local('Cairo'), system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Arabic', Tahoma, sans-serif;
     }
 
     *, *::before, *::after {
@@ -154,7 +146,7 @@
       text-rendering: optimizeSpeed;
     }
 
-    /* Fixed 64px Header: Eliminates CLS */
+    /* Fixed 64px Header */
     header {
       background: var(--surface);
       border-bottom: 1px solid var(--border);
@@ -216,14 +208,13 @@
       margin: 24px auto 40px;
       padding: 0 16px;
       flex: 1;
-      contain: layout;
+      contain: layout style;
     }
 
-    /* Hero section */
+    /* Static Hero: Exact height to prevent pushing elements */
     .hero {
       text-align: center;
       margin-bottom: 24px;
-      min-height: 100px;
     }
 
     .hero h1 {
@@ -246,7 +237,7 @@
       line-height: 1.6;
     }
 
-    /* Calculator Card */
+    /* Converter Card */
     .converter-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -319,7 +310,7 @@
       accent-color: var(--primary);
     }
 
-    /* Input & Outputs Grid */
+    /* Input & Outputs */
     .tafqeet-grid {
       display: flex;
       flex-direction: column;
@@ -354,14 +345,13 @@
       outline: none;
       direction: ltr;
       text-align: right;
-      transition: border-color 0.2s;
     }
 
     .number-input:focus {
       border-color: var(--primary);
     }
 
-    /* Result Boxes */
+    /* Stable Output Cards */
     .output-card {
       background: #f8fafc;
       border: 1px solid var(--border);
@@ -370,6 +360,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-height: 96px; /* Holds height to prevent layout shift */
     }
 
     .output-card.highlight {
@@ -400,7 +391,7 @@
       direction: ltr;
       text-align: left;
       font-family: system-ui, -apple-system, sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       color: #1e3a8a;
     }
 
@@ -417,7 +408,6 @@
       border: 1px solid var(--border);
       background: var(--surface);
       color: var(--text);
-      transition: all 0.2s;
     }
 
     .btn-copy:hover {
@@ -426,7 +416,7 @@
       color: var(--primary);
     }
 
-    /* Quick Samples Bar */
+    /* Samples Tray */
     .samples-bar {
       padding: 14px 20px;
       background: #f8fafc;
@@ -464,7 +454,7 @@
       background: var(--primary-soft);
     }
 
-    /* Long-Form Educational Content */
+    /* Content Visibility: Eliminates forced reflows */
     .article-container {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -719,13 +709,13 @@
       <p>حوّل المبالغ النقدية والأعداد والكسور العشرية إلى حروف مكتوبة بدقة لغوية ونحوية كاملة، مخصصة لكتابة الشيكات البنكية، الفواتير الإلكترونية، والكمبيالات، والعقود الرسمية مجاناً 100%.</p>
     </section>
 
-    <!-- Main Tafqeet Tool Card -->
+    <!-- Converter Card (Zero Layout Shift Ready) -->
     <section class="converter-card" id="tafqeet-app">
       <div class="card-topbar">
         <div class="currency-select-group">
           <label class="currency-label" for="currency-select">العملة النقدية:</label>
           <select id="currency-select" class="currency-dropdown" onchange="runTafqeet()">
-            <option value="EGP">جنيه مصري (EGP)</option>
+            <option value="EGP" selected>جنيه مصري (EGP)</option>
             <option value="SAR">ريال سعودي (SAR)</option>
             <option value="AED">درهم إماراتي (AED)</option>
             <option value="KWD">دينار كويتي (KWD)</option>
@@ -752,31 +742,31 @@
       </div>
 
       <div class="tafqeet-grid">
-        <!-- Number Input Box -->
+        <!-- Number Input Box (Pre-filled to match rendered state) -->
         <div class="input-field-wrap">
           <label for="num-input">
             <span>اكتب المبلغ أو الرقم المالي هنا:</span>
             <span style="font-size:0.85rem; color:var(--primary); cursor:pointer;" onclick="clearInput()">تفريغ الخانة ✖</span>
           </label>
-          <input type="text" id="num-input" class="number-input" placeholder="مثال: 15420.75" oninput="runTafqeet()" aria-label="الرقم المراد تفقيطه">
+          <input type="text" id="num-input" class="number-input" value="15420.75" placeholder="مثال: 15420.75" oninput="runTafqeet()" aria-label="الرقم المراد تفقيطه">
         </div>
 
-        <!-- Arabic Result -->
+        <!-- Arabic Result (Pre-rendered in HTML to avoid CLS) -->
         <div class="output-card highlight">
           <div class="output-header">
             <span>التفقيط باللغة العربية (مع ضبط العملات):</span>
             <button class="btn-copy" onclick="copyResult('output-ar')">📋 نسخ النص العربي</button>
           </div>
-          <div class="output-text" id="output-ar">صفر جنيه مصري فقط لا غير.</div>
+          <div class="output-text" id="output-ar">فقط خمسة عشر ألفاً وأربعمائة وعشرون جنيهاً مصرياً وخمسة وسبعون قرشاً لا غير.</div>
         </div>
 
-        <!-- English Result -->
+        <!-- English Result (Pre-rendered in HTML to avoid CLS) -->
         <div class="output-card">
           <div class="output-header">
             <span>التفقيط باللغة الإنجليزية (Number to Words):</span>
             <button class="btn-copy" onclick="copyResult('output-en')">📋 Copy English</button>
           </div>
-          <div class="output-text en-font" id="output-en">Zero Egyptian Pounds Only.</div>
+          <div class="output-text en-font" id="output-en">Fifteen Thousand, Four Hundred and Twenty Egyptian Pounds and Seventy-Five Piastres Only.</div>
         </div>
       </div>
 
@@ -973,16 +963,15 @@
       <p>© <span id="current-year"></span> جميع الحقوق محفوظة - أداة تفقيط الأرقام الفورية الاحترافية.</p>
       <div class="footer-nav">
         <a href="#tafqeet-app">التفقيط الآن</a>
-        <a href="https://is-app.blogspot.com" target="_blank" rel="noopener">By: 1io.site</a>
+        <a href="https://1io-site.blogspot.com" target="_blank" rel="noopener">By: 1io.site</a>
       </div>
     </div>
   </footer>
 
-  <!-- High-Performance Zero-Dependency Pure JS Tafqeet Engine -->
+  <!-- Pure JS Tafqeet Engine -->
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Currency Definitions (Arabic & English)
     const currencies = {
       EGP: {
         ar: { single: "جنيه مصري", plural: "جنيهات مصرية", fractionSingle: "قرش", fractionPlural: "قروش", decimals: 2 },
@@ -1030,7 +1019,6 @@
       }
     };
 
-    // Arabic Vocabulary
     const arUnits = ["", "واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة"];
     const arTens = ["", "عشرة", "عشرون", "ثلاثون", "أربعون", "خمسون", "ستون", "سبعون", "ثمانون", "تسعون"];
     const arTeens = ["عشرة", "أحد عشر", "اثنا عشر", "ثلاثة عشر", "أربعة عشر", "خمسة عشر", "ستة عشر", "سبعة عشر", "ثمانية عشر", "تسعة عشر"];
@@ -1043,7 +1031,6 @@
       { single: "تريليون", dual: "تريليونان", plural: "تريليونات" }
     ];
 
-    // English Vocabulary
     const enUnits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
     const enTeens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
     const enTens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
@@ -1065,11 +1052,8 @@
         } else if (rem >= 10 && rem <= 19) {
           res.push(arTeens[rem - 10]);
         } else {
-          if (u > 0) {
-            res.push(arUnits[u] + " و" + arTens[t]);
-          } else {
-            res.push(arTens[t]);
-          }
+          if (u > 0) res.push(arUnits[u] + " و" + arTens[t]);
+          else res.push(arTens[t]);
         }
       }
       return res.join(" و");
@@ -1118,9 +1102,7 @@
       const t = Math.floor(rem / 10);
       const u = rem % 10;
 
-      if (h > 0) {
-        res.push(enUnits[h] + " Hundred");
-      }
+      if (h > 0) res.push(enUnits[h] + " Hundred");
 
       if (rem > 0) {
         if (rem < 10) {
@@ -1182,7 +1164,7 @@
         fracVal = parseInt(fracStr, 10);
       }
 
-      // 1. Build Arabic Output
+      // Arabic String
       let arFinal = "";
       if (intVal === 0 && fracVal === 0) {
         arFinal = "صفر " + (curr.ar.single || "");
@@ -1206,7 +1188,7 @@
       if (addSuffix) arFinal = arFinal + " لا غير.";
       outAr.textContent = arFinal.trim();
 
-      // 2. Build English Output
+      // English String
       let enFinal = "";
       if (intVal === 0 && fracVal === 0) {
         enFinal = "Zero " + (curr.en.single || "");
@@ -1264,12 +1246,6 @@
         toast.classList.remove('active');
       }, 2500);
     }
-
-    // Initial Trigger
-    window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('num-input').value = '15420.75';
-      runTafqeet();
-    });
   </script>
 </body>
 </html>
